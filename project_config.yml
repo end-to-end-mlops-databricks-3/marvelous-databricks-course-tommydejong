@@ -1,0 +1,70 @@
+prd:
+  catalog_name: mlops_prd
+  schema_name: fifa_players
+acc:
+  catalog_name: mlops_acc
+  schema_name: fifa_players
+dev:
+  catalog_name: mlops_dev
+  schema_name: fifa_players
+
+parameters:
+  learning_rate: 0.01
+  n_estimators: 1000
+  max_depth: 6
+
+num_features:
+  - age
+  - height_cm
+  - weight_kgs
+  - overall_rating
+  - potential
+  - wage_euro
+  - international_reputation(1-5)
+  - weak_foot(1-5)
+  - skill_moves(1-5)
+  - release_clause_euro
+  - national_rating
+  - national_jersey_number
+  - crossing
+  - finishing
+  - heading_accuracy
+  - short_passing
+  - volleys
+  - dribbling
+  - curve
+  - freekick_accuracy
+  - long_passing
+  - ball_control
+  - acceleration
+  - sprint_speed
+  - agility
+  - reactions
+  - balance
+  - shot_power
+  - jumping
+  - stamina
+  - strength
+  - long_shots
+  - aggression
+  - interceptions
+  - positioning
+  - vision
+  - penalties
+  - composure
+  - marking
+  - standing_tackle
+  - sliding_tackle
+
+cat_features:
+  - name
+  - full_name
+  - birth_date
+  - positions
+  - nationality
+  - preferred_foot
+  - body_type
+  - national_team
+  - national_team_position
+
+target: value_euro
