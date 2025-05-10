@@ -1,12 +1,12 @@
 prd:
   catalog_name: mlops_prd
-  schema_name: fifa_players
+  schema_name: zinutomm
 acc:
   catalog_name: mlops_acc
-  schema_name: fifa_players
+  schema_name: zinutomm
 dev:
   catalog_name: mlops_dev
-  schema_name: fifa_players
+  schema_name: zinutomm
 
 parameters:
   learning_rate: 0.01
