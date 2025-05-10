@@ -20,9 +20,9 @@ num_features:
   - overall_rating
   - potential
   - wage_euro
-  - international_reputation(1-5)
-  - weak_foot(1-5)
-  - skill_moves(1-5)
+  - international_rep
+  - weak_foot
+  - skill_moves
   - release_clause_euro
   - national_rating
   - national_jersey_number

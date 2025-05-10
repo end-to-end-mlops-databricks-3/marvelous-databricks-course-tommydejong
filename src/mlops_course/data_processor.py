@@ -24,6 +24,18 @@ class DataProcessor:
 
         This method handles missing values, converts data types, and performs feature engineering.
         """
+           
+        # Rename incompatible columns
+        self.df.rename(columns=
+            {
+                'international_reputation(1-5)':'international_rep',
+                'weak_foot(1-5)':'weak_foot',
+                'skill_moves(1-5)':'skill_moves'
+            },
+            inplace=True
+        )
+        print(self.df.columns.values.tolist())
+        
         # Handle numeric features
         num_features = self.config.num_features
         for col in num_features:
@@ -37,7 +49,7 @@ class DataProcessor:
             },
             inplace=True,
         )
-
+        
         # Convert categorical features to the appropriate type
         cat_features = self.config.cat_features
         for cat_col in cat_features:
@@ -45,9 +57,8 @@ class DataProcessor:
 
         # Extract target and relevant features
         target = self.config.target
-        relevant_columns = cat_features + num_features + [target] + ["Id"]
+        relevant_columns = cat_features + num_features + [target]
         self.df = self.df[relevant_columns]
-        self.df["Id"] = self.df["Id"].astype("str")
 
     def split_data(self, test_size: float = 0.2, random_state: int = 42) -> tuple[pd.DataFrame, pd.DataFrame]:
         """Split the DataFrame (self.df) into training and test sets.
