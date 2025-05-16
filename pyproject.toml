@@ -42,7 +42,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where =["src"]
-include = ["mlops_course*"]
+include = ["fifa_players*"]
 
 [tool.setuptools.dynamic]
 version = { file = "version.txt" }

@@ -7,8 +7,8 @@ sys.path.append('../src/')
 from loguru import logger
 from pyspark.sql import SparkSession
 
-from mlops_course.config import ProjectConfig
-from mlops_course.data_processor import DataProcessor
+from fifa_players.config import ProjectConfig
+from fifa_players.data_processor import DataProcessor
 from marvelous.logging import setup_logging
 from marvelous.timer import Timer
 
