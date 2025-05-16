@@ -76,6 +76,7 @@ lint.ignore = [
     "E501", # line-too-long
     "C901", # too complex
 ]
+extend-exclude = ["typings"]
 
 [tool.ruff.format]
 indent-style = "space"
