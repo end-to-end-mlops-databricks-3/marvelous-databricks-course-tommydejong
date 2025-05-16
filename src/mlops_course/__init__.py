@@ -7,6 +7,7 @@ from pathlib import Path
 THIS_DIR = Path(__file__).parent
 PROJECT_DIR = (THIS_DIR / "../..").resolve()
 
+
 def get_version() -> str:
     """Retrieve the version of the package.
 

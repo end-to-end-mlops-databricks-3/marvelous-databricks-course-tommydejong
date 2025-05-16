@@ -24,15 +24,14 @@ class DataProcessor:
 
         This method handles missing values, converts data types, and performs feature engineering.
         """
-           
         # Rename incompatible columns
-        self.df.rename(columns=
-            {
-                'international_reputation(1-5)':'international_rep',
-                'weak_foot(1-5)':'weak_foot',
-                'skill_moves(1-5)':'skill_moves'
+        self.df.rename(
+            columns={
+                "international_reputation(1-5)": "international_rep",
+                "weak_foot(1-5)": "weak_foot",
+                "skill_moves(1-5)": "skill_moves",
             },
-            inplace=True
+            inplace=True,
         )
 
         # Drop irrelevant columns
@@ -40,7 +39,7 @@ class DataProcessor:
 
         # Print columns
         print(self.df.columns.values.tolist())
-        
+
         # Handle numeric features
         num_features = self.config.num_features
         for col in num_features:
@@ -48,10 +47,7 @@ class DataProcessor:
 
         # Fill missing values with mean or default values
         self.df.fillna(
-            {
-                "value_euro": self.df["value_euro"].mean(),
-                "wage_euro": self.df["wage_euro"].mean()
-            },
+            {"value_euro": self.df["value_euro"].mean(), "wage_euro": self.df["wage_euro"].mean()},
             inplace=True,
         )
 
