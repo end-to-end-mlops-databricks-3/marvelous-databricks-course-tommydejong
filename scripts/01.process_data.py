@@ -1,6 +1,9 @@
 import argparse
 
 import yaml
+import sys
+sys.path.append('../src/')
+
 from loguru import logger
 from pyspark.sql import SparkSession
 

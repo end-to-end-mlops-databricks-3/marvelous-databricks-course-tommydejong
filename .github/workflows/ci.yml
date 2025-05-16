@@ -1,6 +1,9 @@
 name: CI
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - main
@@ -27,11 +30,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          git config --global url."https://github.com/end-to-end-mlops-databricks-3".insteadOf "https://github.com/end-to-end-mlops-databricks-3"
+          git config --global url."https://x-access-token:$GITHUB_TOKEN@github.com/end-to-end-mlops-databricks-3".insteadOf "https://github.com/end-to-end-mlops-databricks-3"
 
       - name: Install the dependencies
         run: |
-          uv sync --extra ci
+          uv sync --extra test
 
       - name: Run pre-commit checks
         run: |

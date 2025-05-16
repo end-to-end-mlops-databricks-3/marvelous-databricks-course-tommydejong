@@ -59,7 +59,6 @@ num_features:
 cat_features:
   - name
   - full_name
-  - birth_date
   - positions
   - nationality
   - preferred_foot
