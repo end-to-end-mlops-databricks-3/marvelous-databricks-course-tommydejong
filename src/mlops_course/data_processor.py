@@ -34,6 +34,11 @@ class DataProcessor:
             },
             inplace=True
         )
+
+        # Drop irrelevant columns
+        self.df.drop(columns=["birth_date"])
+
+        # Print columns
         print(self.df.columns.values.tolist())
         
         # Handle numeric features
@@ -49,7 +54,7 @@ class DataProcessor:
             },
             inplace=True,
         )
-        
+
         # Convert categorical features to the appropriate type
         cat_features = self.config.cat_features
         for cat_col in cat_features:

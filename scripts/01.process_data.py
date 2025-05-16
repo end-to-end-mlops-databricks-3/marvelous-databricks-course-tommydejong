@@ -5,20 +5,21 @@ from loguru import logger
 from pyspark.sql import SparkSession
 
 from mlops_course.config import ProjectConfig
-from mlops_course.data_processor import DataProcessor, generate_synthetic_data
+from mlops_course.data_processor import DataProcessor
 from marvelous.logging import setup_logging
 from marvelous.timer import Timer
 
-config_path = f"../project_config.yml"
+config_path = f"project_config.yml"
 
 config = ProjectConfig.from_yaml(config_path=config_path, env="dev")
 
+print(f"/Volumes/{config.catalog_name}/{config.schema_name}/logs/marvelous-1.log")
 setup_logging(log_file=f"/Volumes/{config.catalog_name}/{config.schema_name}/logs/marvelous-1.log")
 
 logger.info("Configuration loaded:")
 logger.info(yaml.dump(config, default_flow_style=False))
 
-# Load the house prices dataset
+# Load the fifa players dataset
 spark = SparkSession.builder.getOrCreate()
 
 df = spark.read.csv(
