@@ -58,9 +58,8 @@ class DataProcessor:
 
         # Extract target and relevant features
         target = self.config.target
-        relevant_columns = cat_features + num_features + [target] + ["Id"]
+        relevant_columns = cat_features + num_features + [target]
         self.df = self.df[relevant_columns]
-        self.df["Id"] = self.df["Id"].astype("str")
 
     def split_data(self, test_size: float = 0.2, random_state: int = 42) -> tuple[pd.DataFrame, pd.DataFrame]:
         """Split the DataFrame (self.df) into training and test sets.
