@@ -26,7 +26,7 @@ class DataProcessor:
         """
         # Add Id column
         self.df["Id"] = self.df.index
-        
+
         # Rename incompatible columns
         self.df.rename(
             columns={
