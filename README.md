@@ -1,6 +1,18 @@
 <h1 align="center">
 Marvelous MLOps End-to-end MLOps with Databricks course
 
+## Dataset
+The "Football Players Data" dataset (from [Kaggle](https://www.kaggle.com/datasets/maso0dahmed/football-players-data/data)) offers detailed information on approximately 17,000 FIFA football players, meticulously scraped from SoFIFA.com.
+
+It encompasses a wide array of player-specific data points, including but not limited to player names, nationalities, clubs, player ratings, potential, positions, ages, and various skill attributes. This dataset is ideal for football enthusiasts, data analysts, and researchers seeking to conduct in-depth analysis, statistical studies, or machine learning projects related to football players' performance, characteristics, and career progressions.
+
+This dataset is ideal for data analysis, predictive modeling, and machine learning projects. It can be used for:
+
+- Player performance analysis and comparison.
+- Market value assessment and wage prediction.
+- Team composition and strategy planning.
+- Machine learning models to predict future player potential and career trajectories.
+
 ## Practical information
 - Weekly lectures on Wednesdays 16:00-18:00 CET.
 - Code for the lecture is shared before the lecture.
@@ -36,6 +48,3 @@ uv venv -p 3.11 .venv
 source .venv/bin/activate
 uv sync --extra dev
 ```
-
-
-
