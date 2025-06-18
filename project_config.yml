@@ -13,6 +13,8 @@ parameters:
   n_estimators: 1000
   max_depth: 6
 
+experiment_name_basic: /Shared/fifa-players-basic
+
 num_features:
   - age
   - height_cm
